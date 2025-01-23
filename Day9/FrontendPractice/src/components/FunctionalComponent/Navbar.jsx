@@ -17,7 +17,8 @@ const Navbar = () => {
                     <li><Link to="/signup" className='Link'>Signup</Link></li>
                     <li><Link to="/login" className='Link'>Login</Link></li>
                     <li><Link to="/usestate" className="Link">UseState</Link></li>
-                    <li><Link to="/useeffect" className="Link">Useeffect</Link></li>
+                    <li><Link to="/useeffect" className="Link">UseEffect</Link></li>
+                    <li><Link to="/useeffectapi" className="Link">UseEffectAPI</Link></li>
                     <div>
                         <span onMouseEnter={(toggleDropDown)} onMouseLeave={(toggleDropDown) }>Hooks</span>
                         {dropdown &&(

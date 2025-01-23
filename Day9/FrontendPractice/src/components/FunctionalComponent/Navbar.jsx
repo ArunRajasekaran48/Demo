@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import '../../css/Navbar.css'
-import { Link } from 'react-router-dom'
-const Navbar = () => {
-    var [dropdown, showDropdown] = useState(false)
+import { Link } from "react-router-dom"
+import "../../css/Navbar.css"
+import {useState} from "react"
+const Navbar=()=>{
+    var [dropdown,showDropdown]=useState(false)
     const toggleDropDown=()=>{
-        showDropdown(dropdown=>!dropdown)
+        showDropdown((dropdown)=>!dropdown)
     }
-    return (
-        <header>
-            <nav>
-                <ol>
-                    <li><Link to="/home" className='Link'>Home</Link></li>
-                    <li><Link to="/about" className='Link'>About</Link></li>
-                    <li><Link to="/gallery" className='Link'>Gallery</Link></li>
-                    <li><Link to="/contact" className='Link'>Contact</Link></li>
-                    <li><Link to="/signup" className='Link'>Signup</Link></li>
-                    <li><Link to="/login" className='Link'>Login</Link></li>
-                    <li><Link to="/usestate" className="Link">UseState</Link></li>
-                    <li><Link to="/useeffect" className="Link">UseEffect</Link></li>
-                    <li><Link to="/useeffectapi" className="Link">UseEffectAPI</Link></li>
-                    <div>
-                        <span onMouseEnter={(toggleDropDown)} onMouseLeave={(toggleDropDown) }>Hooks</span>
+    return(
+     <header>
+         <nav>
+             <ol>
+                 <li><Link to='/Home' className="link">Home</Link></li>
+                 <li><Link to='/About' className="link">About</Link></li>
+                 <li><Link to='/Gallery' className="link">Gallery</Link></li>
+                 <li><Link to='/Contact' className="link">Contact</Link></li>
+                 <div className="dropdown">
+                        <div  className="link" onClick={(toggleDropDown)} onLeave={(toggleDropDown)}>Hooks</div>
                         {dropdown &&(
-                            <ul>
+                            <ul className="dropdown-menu">
                                 <li><Link to="/usestate" >UseState</Link></li>
                                 <li><Link to="/useeffect">UseEffect</Link></li>
+                                <li><Link to="/useeffectapi">UseEffectAPI</Link></li>
+                                <li><Link to="/useref">UseRef</Link></li>
+                                <li><Link to="/usereducer">UseReducer</Link></li>
+                                <li><Link to="/usememo">UseMemo</Link></li>
+                                <li><Link to="/callback">UseCallback</Link></li>
                             </ul>)}
                     </div>
-                </ol>
-            </nav>
-        </header>
-    )
-}
-export default Navbar;
+                 <li><Link to='/Signup' className="link">Signup</Link></li>
+                 <li><Link to='/Login' className="link">Login</Link></li>
+                 
+
+             </ol>
+         </nav>
+     </header>
+    ) 
+ }
+ export default Navbar

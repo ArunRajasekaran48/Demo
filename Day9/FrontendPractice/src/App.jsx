@@ -3,7 +3,7 @@ import Home from "./components/FunctionalComponent/Home"
 import Gallery from "./components/FunctionalComponent/Gallery"
 import Contact from "./components/FunctionalComponent/Contact"
 import Navbar from "./components/FunctionalComponent/Navbar"
-import{BrowserRouter, Route, Routes} from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Signup from "./components/FunctionalComponent/Signup"
 import Login from "./components/FunctionalComponent/Login"
 import UseState from "./components/FunctionalComponent/Hooks/UseState"
@@ -13,29 +13,34 @@ import UseReducer from "./components/FunctionalComponent/Hooks/UseReducer.jsx"
 import UseRef from "./components/FunctionalComponent/Hooks/UseRef.jsx"
 import UseMemo from "./components/FunctionalComponent/Hooks/UseMemo.jsx"
 import UseCallback from "./components/FunctionalComponent/Hooks/UseCallback.jsx"
+import ReactLifecycleMethods from "./components/ClassComponent/ReactLifecycleMethods.jsx"
+import Student from "./components/FunctionalComponent/Hooks/Student.jsx"
+import Memo from "./components/FunctionalComponent/Memoization/Memo.jsx"
 function App() {
   return (
-     <BrowserRouter>
-      <Navbar/>
+    <BrowserRouter>
+      <Navbar />
       <Routes>
-      <Route path="/" element={<Home/>}></Route>
-      <Route path="/home" element={<Home/>}></Route>
-          <Route path="/about" element={<About/>}></Route>
-          <Route path="/gallery" element={<Gallery image="SECE LOGO" page="Gallery"/>}></Route>
-          <Route path="/contact" element={<Contact/>}></Route>
-          <Route path="/signup" element={<Signup/>}></Route>
-          <Route path="/login" element={<Login/>}></Route>
-          <Route path="/usestate" element={<UseState/>}></Route>
-          <Route path="/useeffect" element={<UseEffect/>}></Route>
-          <Route path="/useeffectapi" element={<UseEffectAPI/>}></Route>
-          <Route path="/usereducer" element={<UseReducer/>}></Route>
-          <Route path="/useref" element={<UseRef/>}></Route>
-          <Route path="/usememo" element={<UseMemo/>}></Route>
-          <Route path="/callback" element={<UseCallback/>}></Route>
-    </Routes>
-    
-  </BrowserRouter>
-  
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/gallery" element={<Gallery image="SECE LOGO" page="Gallery" />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/signup" element={<Signup />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/usestate" element={<UseState />}></Route>
+        <Route path="/useeffect" element={<UseEffect />}></Route>
+        <Route path="/useeffectapi" element={<UseEffectAPI />}></Route>
+        <Route path="/usereducer" element={<UseReducer />}></Route>
+        <Route path="/useref" element={<UseRef />}></Route>
+        <Route path="/usememo" element={<UseMemo />}></Route>
+        <Route path="/callback" element={<UseCallback />}></Route>
+        <Route path="/reactlifecycle" element={<ReactLifecycleMethods />}></Route>
+        <Route path="/student" element={<Student />}></Route>
+        <Route path="/memo" element={<Memo />}></Route>
+      </Routes>
+    </BrowserRouter>
+
   );
-  }
-  export default App;
+}
+export default App;

@@ -1,4 +1,4 @@
-import CoE from "./Coe"
+import CoE from "./CoE"
 const Faculty=(res)=>{
     return(
         <div style={{textAlign:"center"}}>
